@@ -11,8 +11,10 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Header */
@@ -21,66 +23,87 @@ header {
     padding: 20px 0;
     color: white;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 header h1 {
-    font-size: 2em;
-    margin-bottom: 5px;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header nav {
+    margin-top: 15px;
 }
 
 header nav a {
-    margin: 0 10px;
+    margin: 0 15px;
     color: white;
     text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+header nav a:hover {
+    background-color: rgba(255,255,255,0.2);
 }
 
 /* Hero Section */
 .hero {
-    background: #f0f0f0;
-    padding: 60px 0;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+    padding: 80px 0;
     text-align: center;
 }
 
 .hero h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    color: #444;
 }
 
 .hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .buttons .button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 25px;
     margin: 10px;
     background-color: #ff6b6b;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: bold;
 }
 
 .buttons .button:hover {
     background-color: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Info Section */
 .info-section {
-    padding: 40px 0;
+    padding: 60px 0;
     background: #ffffff;
     text-align: center;
 }
 
 .info-section h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #ff6b6b;
 }
 
 .info-section p,
 .info-section ul {
-    font-size: 1em;
-    max-width: 600px;
+    font-size: 1.1em;
+    max-width: 800px;
     margin: 0 auto;
     color: #666;
 }
@@ -88,26 +111,123 @@ header nav a {
 .info-section ul {
     list-style: none;
     padding: 0;
+    text-align: left;
 }
 
 .info-section ul li {
-    margin: 10px 0;
+    margin: 20px 0;
+    padding-left: 30px;
+    position: relative;
+}
+
+.info-section ul li strong {
+    color: #ff6b6b;
+}
+
+/* Registration Form */
+.registration-form {
+    padding: 40px 0;
+    background: #f9f9f9;
+}
+
+.registration-form .container {
+    max-width: 600px;
+}
+
+.registration-form h2 {
+    text-align: center;
+    color: #ff6b6b;
+    margin-bottom: 30px;
+}
+
+.registration-form form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+}
+
+.registration-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.registration-form input:focus {
+    outline: none;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 5px rgba(255,107,107,0.2);
+}
+
+.registration-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.registration-form button:hover {
+    background-color: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Footer */
 footer {
     background-color: #333;
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
+footer nav {
+    margin-top: 10px;
+}
+
 footer nav a {
-    margin: 0 5px;
+    margin: 0 10px;
     color: #ccc;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 footer nav a:hover {
     color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    
+    .hero h2 {
+        font-size: 1.8em;
+    }
+    
+    .hero p {
+        font-size: 1.1em;
+    }
+    
+    .buttons .button {
+        display: block;
+        margin: 10px auto;
+        max-width: 280px;
+    }
 }
