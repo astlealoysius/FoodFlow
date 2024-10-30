@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register as Charity Organization - FoodFlow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>FoodFlow</h1>
+            <p>Register as a Charity Organization</p>
+            <a href="index.html">Home</a>
+        </div>
+    </header>
+
+    <section class="registration-form">
+        <div class="container">
+            <h2>Charity Organization Registration</h2>
+            <form action="submit-organization.html" method="post">
+                <label for="org-name">Organization Name:</label>
+                <input type="text" id="org-name" name="org_name" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="charity-type">Charity Type (e.g., Homeless Shelter, Food Bank):</label>
+                <input type="text" id="charity-type" name="charity_type" required>
+
+                <button type="submit" class="button">Register Organization</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
